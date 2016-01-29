@@ -21,7 +21,16 @@ gem 'turbolinks'
 
 gem 'jbuilder', '~> 2.0'
 
-gem "jquery-ui-rails"
+gem 'jquery-ui-rails'
+
+gem 'warden'
+
+gem 'devise'
+
+gem 'responders', '~> 2.0'
+
+gem 'protected_attributes'
+
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
