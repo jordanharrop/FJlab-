@@ -6,8 +6,8 @@
     <%= f.input :category, :required => true, :include_blank => false %>
     <%= f.input :mobility, :required => true, :include_blank => false %>
     <%= f.input :mobility_rank %>
-    <%= f.input :gender, :as => :select, :collection => ["Mens", "Womens", "Juniors"], :required => true %>
-    <%= f.input :warranty, :as => :select, :collection => ["TBD", "None", "One Year", "Two Years"], :required => true %>
+    <%= f.input :gender, :as => :select, :collection => ["Mens", "Womens", "Juniors"], :required => true, :include_blank => false %>
+    <%= f.input :warranty, :as => :select, :collection => ["TBD", "None", "One Year", "Two Years"], :required => true, :include_blank => false %>
     <%= f.input :warranty_url %>
     <%= f.input :image_url %>
     <%= f.input :description %>
