@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Style number:</strong>
+  <%= @product.style_number %>
+</p>
+
+<p>
+  <strong>Fd number:</strong>
+  <%= @product.fd_number %>
+</p>
+
+<p>
+  <strong>Confirmation number:</strong>
+  <%= @product.confirmation_number %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>Mobility:</strong>
+  <%= @product.mobility %>
+</p>
+
+<p>
+  <strong>Mobility rank:</strong>
+  <%= @product.mobility_rank %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @product.gender %>
+</p>
+
+<p>
+  <strong>Warranty:</strong>
+  <%= @product.warranty %>
+</p>
+
+<p>
+  <strong>Warranty url:</strong>
+  <%= @product.warranty_url %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @product.image_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @product.comments %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

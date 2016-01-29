@@ -1,0 +1,1 @@
+json.extract! @product, :id, :style_number, :fd_number, :confirmation_number, :category_id, :mobility_id, :mobility_rank, :gender, :warranty, :warranty_url, :image_url, :description, :comments, :created_at, :updated_at

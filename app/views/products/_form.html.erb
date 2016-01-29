@@ -1,0 +1,21 @@
+<%= semantic_form_for @product do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :style_number %>
+    <%= f.input :fd_number %>
+    <%= f.input :confirmation_number %>
+    <%= f.input :category, :required => true, :include_blank => false %>
+    <%= f.input :mobility, :required => true, :include_blank => false %>
+    <%= f.input :mobility_rank %>
+    <%= f.input :gender, :as => :select, :collection => ["Mens", "Womens", "Juniors"], :required => true %>
+    <%= f.input :warranty, :as => :select, :collection => ["TBD", "None", "One Year", "Two Years"], :required => true %>
+    <%= f.input :warranty_url %>
+    <%= f.input :image_url %>
+    <%= f.input :description %>
+    <%= f.input :comments %>
+    <%= f.input :market_ids, :as => :check_boxes, :collection => Hash[Market.all.collect{|x| [x.name, x.id]}] %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
