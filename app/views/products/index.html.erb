@@ -1,49 +1,71 @@
-<p id="notice"><%= notice %></p>
+<div id="wrapper">
 
-<h1>Listing Products</h1>
+      <div class="row wrapper border-bottom white-bg page-heading">
+              <div class="col-lg-10">
+                  <h2>FooTable</h2>
+              </div>
+              <div class="col-lg-2">
 
-<table>
-  <thead>
-    <tr>
-      <th>Style number</th>
-      <th>Fd number</th>
-      <th>Confirmation number</th>
-      <th>Category</th>
-      <th>Mobility</th>
-      <th>Mobility rank</th>
-      <th>Gender</th>
-      <th>Warranty</th>
-      <th>Warranty url</th>
-      <th>Image url</th>
-      <th>Description</th>
-      <th>Comments</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              </div>
+          </div>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.style_number %></td>
-        <td><%= product.fd_number %></td>
-        <td><%= product.confirmation_number %></td>
-        <td><%= product.category.name %></td>
-        <td><%= product.mobility.name %></td>
-        <td><%= product.mobility_rank %></td>
-        <td><%= product.gender %></td>
-        <td><%= product.warranty %></td>
-        <td><%= product.warranty_url %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.description %></td>
-        <td><%= product.comments %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                  <h5>Products Table</h5>
+                  <p id="notice"><%= notice %></p>
 
-<br>
+                  <div class="ibox-tools">
+                    <%= link_to 'New Product', new_product_path, :class => 'btn btn-primary btn-xs' %>
+                    <%= link_to 'Multi', new_product_path, :class => 'btn btn-primary btn-xs' %>
+                  </div>
+              </div>
+              <div class="ibox-content">
 
-<%= link_to 'New Product', new_product_path %>
+                <table class="footable table table-stripped toggle-arrow-tiny">
+                  <thead>
+                    <tr>
+                      <th data-toggle="true">Style Number</th>
+                      <th>Fd Number</th>
+                      <th>Confirmation Number</th>
+                      <th>Category</th>
+                      <th>Mobility</th>
+                      <th>Mobility rank</th>
+                      <th>Gender</th>
+                      <th>Warranty</th>
+                      <th>Description</th>
+                      <th>Options</th>
+                      <th colspan="2"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @products.each do |product| %>
+                      <tr>
+                        <td><%= product.style_number %></td>
+                        <td><%= product.fd_number %></td>
+                        <td><%= product.confirmation_number %></td>
+                        <td><%= product.category.name %></td>
+                        <td><%= product.mobility.name %></td>
+                        <td><%= product.mobility_rank %></td>
+                        <td><%= product.gender %></td>
+                        <td><%= product.warranty %></td>
+                        <td><%= product.description %></td>
+                        <td>
+                        <%= link_to 'Show', product, :class => 'btn btn-default btn-xs' %>
+                        <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-default btn-xs' %>
+                        <%= link_to 'Destroy', product, :class => 'btn btn-default btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
+                      </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   get "home/index"
   get "home/minor"
-
-  root 'home#index'
+  get "store/index"
+  root 'store#index'
 
 
 
